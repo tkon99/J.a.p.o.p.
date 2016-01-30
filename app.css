@@ -1,0 +1,99 @@
+body{
+	font-family: 'Cutive Mono', Serif;
+}
+
+#home{
+	text-align: center;
+}
+
+.btn{
+	text-decoration: none;
+	background-color: #EEEEEE;
+	color: #333333;
+	padding: 15px;
+	border-top: 1px solid #CCCCCC;
+	border-right: 1px solid #333333;
+	border-bottom: 1px solid #333333;
+	border-left: 1px solid #CCCCCC;
+	cursor: pointer;
+}
+
+#bg {
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+
+  max-width: 100%;
+  min-height: 100%;
+
+  z-index: -1;
+}
+
+#intro{
+	padding-top: 50px;
+	position: fixed;
+	top: 0px;
+	width: 100%;
+	text-align: center;
+	color: white;
+}
+
+/* A4 page CSS */
+page[size="A4"] {
+  background: #FFFFE0;
+  width: 21cm;
+  height: 29.7cm;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 0.5cm;
+  box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
+}
+.first{
+	margin-top: 70vh !important;
+}
+@media print {
+  body, page[size="A4"] {
+    margin: 0;
+    box-shadow: 0;
+  }
+}
+
+/* Full screen lock */
+html #app{
+	display: none;
+}
+html #home{
+	display: block;
+}
+html:-moz-full-screen #app{
+    display: block !important;
+}
+
+html:-webkit-full-screen #app{
+    display: block !important;
+}
+
+html:-ms-fullscreen #app{
+    display: block !important;
+    width: 100%; /* needed to center contents in IE */
+}
+
+html:fullscreen #app{
+	display: block !important;
+}
+html:-moz-full-screen #home{
+    display: none !important;
+}
+
+html:-webkit-full-screen #home{
+    display: none !important;
+}
+
+html:-ms-fullscreen #home{
+    display: none !important;
+    width: 100%; /* needed to center contents in IE */
+}
+
+html:fullscreen #home{
+	display: none !important;
+}
