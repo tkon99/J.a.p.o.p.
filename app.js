@@ -1,5 +1,5 @@
-$(document).ready(function(){
-	$("#startButton").click(function(){
+document.addEventListener("DOMContentLoaded", function(){
+	document.getElementById("startButton").addEventListener("click", function(){
 		launchIntoFullscreen(document.documentElement);
 	});
 	var items = [
@@ -11,7 +11,7 @@ $(document).ready(function(){
 		"https://unsplash.com/photos/sgMKvgikHT8/download"
 	];
 	var item = items[Math.floor(Math.random()*items.length)];
-	$("#bg").attr("src",item);
+	document.getElementById("bg").src = item;
 });
 
 function launchIntoFullscreen(element) {
