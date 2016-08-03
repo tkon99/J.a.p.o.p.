@@ -6,6 +6,34 @@ body{
 	text-align: center;
 }
 
+#textBox{
+  opacity: 0;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+}
+
+#output{
+  display:inline-block;
+  max-width:15.92cm;
+  height:24.62cm;
+  word-wrap:break-word;
+  padding: 2.54cm;
+}
+
+#cursor {
+  display: inline;
+  position: absolute;
+  color: black;
+  -webkit-animation: blink 1s infinite;
+  animation: blink 1s infinite;
+}
+
+@-webkit-keyframes blink {
+  0%, 49.9%, 100%   { opacity: 0; }
+  50%, 99.9% { opacity: 1; }
+}
+
 .btn{
 	text-decoration: none;
 	background-color: #EEEEEE;
@@ -36,6 +64,8 @@ body{
 	width: 100%;
 	text-align: center;
 	color: white;
+
+  z-index: -1;
 }
 
 /* A4 page CSS */
@@ -47,9 +77,13 @@ page[size="A4"] {
   margin: 0 auto;
   margin-bottom: 0.5cm;
   box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
+  z-index: 2;
+}
+page h1{
+  display: inline-block;
 }
 .first{
-	margin-top: 70vh !important;
+	margin-top: 50vh !important;
 }
 @media print {
   body, page[size="A4"] {

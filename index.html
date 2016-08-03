@@ -2,13 +2,13 @@
 <html>
 <head>
 	<title>Just a piece of paper | J.a.p.o.p.</title>
-	<script type="text/javascript" src="jquery.min.js"></script>
 	<script type="text/javascript" src="app.js"></script>
 
 	<link href='https://fonts.googleapis.com/css?family=Cutive+Mono&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="app.css">
 </head>
 <body>
+	<input type="text" id="textBox">
 	<div id="home">
 		<h1>J.a.p.o.p.</h1>
 		<i>Just a piece of paper</i>
@@ -16,8 +16,8 @@
 		<p>
 			<b>Ever felt the need to just sit in front of a piece of paper,<br>to just think and write?</b><br><br>
 			Well, if you have, you've come to the right place.<br>
-			J.a.p.o.p. can only be used in fullscreen to give you <br>the ultimate distraction free experience.<br><br>
-			You can't use your backspace either, only strike through.<br>And you can only print the result :D
+			J.a.p.o.p. can only be used in fullscreen to give you <br>the ultimate distraction-free experience.<br><br>
+			You can't use your backspace either. (Use delete to strike the last word)<br>Oh, and you can only print the result :D
 		</p>
 		<br>
 		<a id="startButton" class="btn">Start J.a.p.o.p.</a>
@@ -30,8 +30,9 @@
 			<i>By tkon99</i>
 		</div>
 		<div id="pages">
-			<page size="A4" class="first"></page>
-			<page size="A4"></page>
+			<page size="A4" class="first">
+				<span id="output"><span id="cursor">|</span></span>
+			</page>
 		</div>
 	</div>
 </body>
